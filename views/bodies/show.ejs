@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title><%= body.name %></title>
+</head>
+<body>
+    <h1>New User</h1>
+    <h2>Name: <%= body.name %></h2>
+    <h3>Date of Birth: <%= body.dob %></h3>
+    <h4>Gender: <%= body.gender %></h4>
+
+    <form action="/bodies/<%=body._id%>?_method=DELETE" method="POST">
+        <input type="submit" value="Delete user">
+    </form>
+
+    <form action="/bodies/<%= body._id%>/edit" method="GET">
+        <input type="submit" value="Edit User">
+    </form>
+
+    <form action="/bodies" method="GET">
+        <input type="submit" value="All User">
+    </form>
+</body>
+</html>
