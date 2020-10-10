@@ -3,17 +3,17 @@ const Schema = mongoose.Schema;
 
 const bodySchema = new Schema({
     name: {type: String, },
+    bodyPart: {// Head Arms Legs Torso
+        type: Array,
+        default: ["Head","Arms","Legs","Torso"] 
+    },
     bones: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Bone"
+        type: String,
     }],
-    muscles: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Muscle"
-    }],
-    dob: Date,
-    gender: String,
-    doctor: String,
+    notes: [{
+        type:mongoose.Schema.Types.ObjectId,
+        ref: "Note"
+    }]
 },{timestamps: true});
 
 const Body = mongoose.model("Body", bodySchema);

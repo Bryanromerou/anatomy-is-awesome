@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+body{
+    background-color: #e4e4e4;
+}
+header{
+    background-color: red;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 20px 150px 20px 80px;
+}
+nav #addUser{
+    color: white;
+}

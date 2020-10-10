@@ -3,10 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/style.css">
     <title>Body Index</title>
 </head>
 <body>
-    <h1>Body Index</h1>
+    <header>
+        <h1>Body Index</h1>
+        <nav>
+            <a href="/bodies/new"><p id="addUser">Add User</p></a>
+        </nav>
+    </header>
     <ul>
         <% for(let i = 0 ; i< bodies.length; i++){ %> 
         <li>
@@ -14,8 +20,5 @@
         </li>
          <% } %> 
     </ul>
-    <form action="/bodies/new" method="GET">
-        <input type="submit" value="Add User">
-    </form>
 </body>
 </html>

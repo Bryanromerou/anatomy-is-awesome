@@ -16,19 +16,17 @@ app.use(express.static("public"));
 app.use(morgan(':method :url'));
 
 app.get("/",(req, res)=>{
-    res.send("<h1>Working</h1>")
+    res.render("index");
 });
 
 app.use("/bodies",ctrl.bodies);
-app.use("/bones",ctrl.bones);
-app.use("/muscles",ctrl.muscles);
 
 
 
 // 404 Route
 app.use('*', (req, res) => {
     res.render('404');
-  });
+});
 
 
 // ------------------ LISTEN
