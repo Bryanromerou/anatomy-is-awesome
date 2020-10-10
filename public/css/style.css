@@ -19,3 +19,28 @@ header{
 nav #addUser{
     color: white;
 }
+
+
+.bodyList{
+    flex-wrap: wrap;
+}
+.bodyPreview{
+    background-color: #e7e1d8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px;
+}
+.bodyListElement{
+    width: 300px;
+    height: 300px;
+}
+
+.bodyAddressIndex{
+    padding: 0 14px;
+}
+#fullSkeleton{
+    content:url("https://img.buzzfeed.com/store-an-image-prod-us-east-1/uvYmnYxub.png");
+    width: auto;
+    height: 200px;
+}

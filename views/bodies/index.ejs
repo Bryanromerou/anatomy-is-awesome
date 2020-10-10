@@ -13,10 +13,14 @@
             <a href="/bodies/new"><p id="addUser">Add User</p></a>
         </nav>
     </header>
-    <ul>
+    <ul class = "bodyList">
         <% for(let i = 0 ; i< bodies.length; i++){ %> 
-        <li>
-            <a href="/bodies/<%= bodies[i]._id %>"><%= bodies[i].name %></a>
+        <li class = "bodyListElement">
+            <a href="/bodies/<%= bodies[i]._id %>">
+            <div class = "bodyPreview">
+            <div id="fullSkeleton"></div>
+            <p class="bodyName"><%= bodies[i].name %></p>
+            </a>
         </li>
          <% } %> 
     </ul>

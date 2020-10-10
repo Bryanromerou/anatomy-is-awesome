@@ -3,11 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../../css/bodyShow.css">
 <title><%= body.name %></title>
 </head>
 <body>
-    <h1><%= body.name %></h1>
-
+    <header>
+        <h1>Skeleton</h1>
+        <nav>
+            <a href="/bodies"><p id="addUser">Select User</p></a>
+        </nav>
+    </header>
+    <h2><%= body.name %></h1>
+    <div id="fullSkeleton"></div>
     <form action="/bodies/<%=body._id%>?_method=DELETE" method="POST">
         <input type="submit" value="Delete user">
     </form>
@@ -15,9 +22,18 @@
     <form action="/bodies/<%= body._id%>/edit" method="GET">
         <input type="submit" value="Edit User">
     </form>
-
-    <form action="/bodies" method="GET">
-        <input type="submit" value="All User">
+    <form action="/bodies/<%= body._id%>/head" method="GET">
+        <input type="submit" value="Head">
     </form>
+    <form action="/bodies/<%= body._id%>/arms" method="GET">
+        <input type="submit" value="Arms">
+    </form>
+    <form action="/bodies/<%= body._id%>/legs" method="GET">
+        <input type="submit" value="Legs">
+    </form>
+    <form action="/bodies/<%= body._id%>/torso" method="GET">
+        <input type="submit" value="Torso">
+    </form>
+
 </body>
 </html>

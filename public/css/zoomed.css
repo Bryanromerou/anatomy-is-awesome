@@ -1,0 +1,24 @@
+body{
+    background-color: royalblue;
+}
+
+#head{
+    content: url("../images/head.png");
+    height: 300px;
+    width: auto;
+}
+#arms{
+    content: url("../images/arms.png");
+    height: 300px;
+    width: auto;
+}
+#legs{
+    content: url("../images/legs.png");
+    height: 300px;
+    width: auto;
+}
+#torso{
+    content: url("../images/torso.png");
+    height: 300px;
+    width: auto;
+}

@@ -67,4 +67,14 @@ router.delete("/:bodiesId",(req,res)=>{
     })
 });
 
+//This is the route to see the body part zoomed in
+router.get("/:bodiesId/:bodyPart",(req, res)=>{
+    db.Body.findById(req.params.bodyId, (err, foundBody)=>{
+        res.render("bodies/zoomed",{
+            body: foundBody,
+            bodyPart: req.params.bodyPart
+        });
+    });
+});
+
 module.exports = router;
