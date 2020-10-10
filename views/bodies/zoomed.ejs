@@ -10,5 +10,9 @@
     <h1>We are now viewing the zoomed in version of <%= bodyPart%></h1>
     <h2><%= bodyPart%></h2>
     <div id = "<%= bodyPart%>"></div>
+    <% for(let i = 0 ; i< muscles.length; i++){ %> 
+        <button><%= muscles[i]%></button>
+    <% } %> 
+
 </body>
 </html>

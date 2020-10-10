@@ -1,6 +1,8 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
+const allMuscles = require("../data/muscles");
+
 const bodySchema = new Schema({
     name: {type: String, },
     bodyPart: {// Head Arms Legs Torso
@@ -10,6 +12,10 @@ const bodySchema = new Schema({
     bones: [{
         type: String,
     }],
+    allMuscles:{
+        type: Array,
+        default: allMuscles
+    },
     notes: [{
         type:mongoose.Schema.Types.ObjectId,
         ref: "Note"

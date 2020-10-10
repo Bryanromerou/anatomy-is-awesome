@@ -58,8 +58,8 @@ router.put("/:bodyId",(req,res)=>{
 });
 
 // ---------------Destroy-----------------//
-router.delete("/:bodiesId",(req,res)=>{
-    db.Body.findByIdAndRemove(req.params.bodiesId,(err,restOfProperties)=>{
+router.delete("/:bodyId",(req,res)=>{
+    db.Body.findByIdAndRemove(req.params.bodyId,(err,restOfProperties)=>{
         if(err)
         console.log(`You've got an error: ${err}`);
         res.redirect(`/bodies`);
@@ -68,11 +68,21 @@ router.delete("/:bodiesId",(req,res)=>{
 });
 
 //This is the route to see the body part zoomed in
-router.get("/:bodiesId/:bodyPart",(req, res)=>{
+router.get("/:bodyId/:bodyPart",(req, res)=>{
     db.Body.findById(req.params.bodyId, (err, foundBody)=>{
+        const muscles = foundBody.allMuscles;
+        const remainingMuscles = [];
+        for(i = 0 ; i < muscles.length; i++){
+            if(muscles[i].bodyPart == req.params.bodyPart){
+                if(muscles[i].visable == false) remainingMuscles.push(muscles[i].name);//KEEP IN MIND I ONLY PASSED NAME AS STRING
+            }
+        };
+        console.log(remainingMuscles);
+
         res.render("bodies/zoomed",{
             body: foundBody,
-            bodyPart: req.params.bodyPart
+            bodyPart: req.params.bodyPart,
+            muscles: remainingMuscles,
         });
     });
 });
