@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const allMuscles = require("../data/muscles");
 
 const bodySchema = new Schema({
-    name: {type: String, },
+    name: {type: String },
     bodyPart: {// Head Arms Legs Torso
         type: Array,
         default: ["Head","Arms","Legs","Torso"] 
