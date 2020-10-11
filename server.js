@@ -15,6 +15,7 @@ app.use(methodOverride('_method'));
 app.use(express.static("public"));
 app.use(morgan(':method :url'));
 
+
 app.get("/",(req, res)=>{
     res.render("index");
 });
