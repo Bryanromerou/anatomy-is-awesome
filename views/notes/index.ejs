@@ -7,7 +7,16 @@
 </head>
 <body>
     <h1>Notes Index</h1>
-    
-    
+    <ul>
+        <% for(let i = 0 ; i< notes.length; i++){ %> 
+        
+     <a href="/notes/<%=notes[i]._id %>" >
+        <div class= "notesPreview">
+        <div id="notesFull">  
+        </div>
+        <p class="notesTest"><%= notes[i].title %></p>
+        <% } %>
+     </a>
+    </ul>
 </body>
 </html>

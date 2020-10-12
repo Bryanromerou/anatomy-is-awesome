@@ -8,9 +8,15 @@ const db = require("../models");
 //---------------Index-----------------//
 
 router.get('/', (req, res) => {
+    db.Note.find({}, (err, allNotes) => {
+    
+        if(err) return console.log(err);
+        res.render('notes/index', {
+            notes: allNotes,
+        });
+    });
     
     
-    res.render('notes/index');
 
 });
 
@@ -29,7 +35,7 @@ router.post('/', (req, res) => {
 });
 
 //---------------Show------------------//
-router.get('/:noteId', (req, res) => {
+router.get("/:noteId", (req, res) => {
     db.Note.findById(req.params.noteId, (err, foundNotes) => {
         if(err) return console.log(err);
         res.render('notes/show', {
@@ -39,9 +45,25 @@ router.get('/:noteId', (req, res) => {
 })
 
 //---------------Edit------------------//
+router.get("/:noteId/edit", (req, res) => {
+    db.Note.findById(req.params.noteId, (err, editNote) => {
+        if (err) return console.log(err);
+        res.render("notes/edit", {
+            note: editNote,
+        });
 
+    });
+});
 //---------------Update----------------//
-
+router.put("/:noteId", (req, res) => {
+    db.Note.findByIdAndUpdate(req.params.noteId, {$set:
+        {
+            title: req.body.title,
+        }},{new:true},(err,newNote)=>{
+        if(err) return console.log(err);
+        res.redirect(`/notes/${newNote._id}`)
+});
+});
 //---------------Destroy---------------//
 
 module.exports = router;
