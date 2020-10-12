@@ -59,11 +59,18 @@ router.put("/:noteId", (req, res) => {
     db.Note.findByIdAndUpdate(req.params.noteId, {$set:
         {
             title: req.body.title,
+            text: req.body.text,
         }},{new:true},(err,newNote)=>{
         if(err) return console.log(err);
         res.redirect(`/notes/${newNote._id}`)
 });
 });
 //---------------Destroy---------------//
+router.delete("/:noteId", (req, res) => {
+    db.Note.findByIdAndDelete(req.params.noteId, (err, restOfProperties) => {
+        if(err) return console.log(err);
+        res.redirect('/notes');
+    })
+})
 
 module.exports = router;
