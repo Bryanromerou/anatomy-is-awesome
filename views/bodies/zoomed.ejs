@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://cdn.tiny.cloud/1/xzc8gk0ro1z3beph28zwvainplprcrf6dowpxy8lm94mnlkz/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    
+    <link rel="stylesheet" href="../../css/zoomed.css">
+    <title>Zoomed</title>
+</head>
+<body>
+    <h1>We are now viewing the zoomed in version of <%= bodyPart%></h1>
+    <h2><%= bodyPart%></h2>
+    <div id = "<%= bodyPart%>"></div>
+    <% for(let i = 0 ; i< displayedMuscles.length; i++){ %> 
+        <p>The <%= displayedMuscles[i]%> is now on the body</p>
+    <% } %> 
+
+    <!-- if not empty then create a note -->
+    <% if(empty==false){%>
+    <form method="post">
+            <textarea id="mytextarea">Hello, World!</textarea>
+    </form>
+    <%}%>
+        
+    <% for(let i = 0 ; i< muscles.length; i++){ %> 
+        <form action="/bodies/<%= body._id%>/<%= bodyPart%>?_method=PUT" method="POST">
+            <button name="currentMuscle" type="submit" value="<%= muscles[i]%>"><%= muscles[i]%>Button</button>
+        </form>
+    <% } %> 
+
+    <form action="/bodies/<%= body._id%>" method="get">
+        <button type="submit">Back</button>
+    </form>
+            
+
+        
+    <script src="../../javascript/noteTaking.js"></script>
+</body>
+</html>
