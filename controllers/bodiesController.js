@@ -94,6 +94,7 @@ router.get("/:bodyId/:bodyPart",(req, res)=>{
     });
 });
 
+
 router.put("/:bodyId/:bodyPart",(req, res)=>{
     db.Body.findById(req.params.bodyId,(err,foundBody)=>{
         if (err) return console.log(`You've got an error: ${err}`);
@@ -112,5 +113,11 @@ router.put("/:bodyId/:bodyPart",(req, res)=>{
 });
 
 
+router.post("/:bodyId/:bodyPart",(req, res)=>{
+    db.Note.create(req.body,(err,newNote)=>{
+        if(err) return console.log(err);
+        res.redirect(`/bodies/${req.params.bodyId}`)
+    });
+});
 
 module.exports = router;
