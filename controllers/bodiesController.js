@@ -50,8 +50,6 @@ router.get("/:bodyId/edit", (req, res)=>{
 router.put("/:bodyId",(req,res)=>{
     db.Body.findByIdAndUpdate(req.params.bodyId,{$set:{
         name: req.body.name,
-        dob: req.body.dob,
-        gender: req.body.gender,
     }},{new:true},(err,newBody)=>{
         if(err) return console.log(err);
         res.redirect(`/bodies/${newBody._id}`)
