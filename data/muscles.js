@@ -9,7 +9,7 @@ allMuscles = [
     {name:"Deltoid",  bodyPart:"arms", visable:false},
     {name:"Flexers",  bodyPart:"arms", visable:false},
     {name:"Extenders",  bodyPart:"arms", visable:false},
-    {name:"Masetter",  bodyPart:"head", visable:false},
+    {name:"Masseter",  bodyPart:"head", visable:false},
     {name:"Temporalis",  bodyPart:"head", visable:false},
     {name:"Frontalis",  bodyPart:"head", visable:false},
     {name:"Orbicularis Oris",  bodyPart:"head", visable:false},
