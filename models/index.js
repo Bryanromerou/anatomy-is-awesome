@@ -16,5 +16,6 @@ mongoose.connection.on("error",(err)=>{
 });
 
 module.exports = {
-    Body: require("./Body"),    
+    Body: require("./Body"),
+    Note: require("./Note")    
 }

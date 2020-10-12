@@ -21,7 +21,7 @@ app.get("/",(req, res)=>{
 });
 
 app.use("/bodies",ctrl.bodies);
-
+app.use("/notes",ctrl.notes);
 
 
 // 404 Route
