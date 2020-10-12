@@ -66,6 +66,9 @@ router.delete("/:bodyId",(req,res)=>{
     })
 });
 
+
+
+
 //This is the route to see the body part zoomed in
 router.get("/:bodyId/:bodyPart",(req, res)=>{
     db.Body.findById(req.params.bodyId, (err, foundBody)=>{
@@ -91,8 +94,8 @@ router.get("/:bodyId/:bodyPart",(req, res)=>{
     });
 });
 
-router.put("/:bodyId/:bodyPart",(req, res)=>{
 
+router.put("/:bodyId/:bodyPart",(req, res)=>{
     db.Body.findById(req.params.bodyId,(err,foundBody)=>{
         if (err) return console.log(`You've got an error: ${err}`);
         
@@ -107,8 +110,14 @@ router.put("/:bodyId/:bodyPart",(req, res)=>{
             res.redirect(`/bodies/${req.params.bodyId}/${req.params.bodyPart}`);
         });
     });
-
 });
 
+
+router.post("/:bodyId/:bodyPart",(req, res)=>{
+    db.Note.create(req.body,(err,newNote)=>{
+        if(err) return console.log(err);
+        res.redirect(`/bodies/${req.params.bodyId}`)
+    });
+});
 
 module.exports = router;
