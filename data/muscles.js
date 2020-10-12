@@ -13,7 +13,7 @@ allMuscles = [
     {name:"Temporalis",  bodyPart:"head", visable:false},
     {name:"Frontalis",  bodyPart:"head", visable:false},
     {name:"Orbicularis Oris",  bodyPart:"head", visable:false},
-    {name:"sternocleidomastoid",  bodyPart:"head", visable:false},
+    {name:"Sternocleidomastoid",  bodyPart:"head", visable:false},
     {name:"Trapezius",  bodyPart:"torso", visable:false},
     {name:"Pectorial",  bodyPart:"torso", visable:false},
     {name:"Obliques",  bodyPart:"torso", visable:false},

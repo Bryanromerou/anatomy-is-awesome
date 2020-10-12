@@ -15,6 +15,9 @@ const noteSchema = new Schema({
     },
     muscle:{
         type: String,
+    },
+    bodyPart:{
+        type: String,
     }
 },{timestamps: true});
 

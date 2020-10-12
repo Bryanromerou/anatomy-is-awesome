@@ -1,11 +1,14 @@
 body{
     background-color: royalblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
 #head{
     content: url("../images/head.png");
-    height: 300px;
+    height: 600px;
     width: auto;
+    background-color: salmon;
 }
 #arms{
     content: url("../images/arms.png");
@@ -23,7 +26,26 @@ body{
     width: auto;
 }
 
+h2{
+    margin-top:30px;
+    margin-bottom: 20px;
+}
 
 button{
+    width: 190px;
+    height: 50px;
+    font-size: larger;
+}
 
+.middleSection{
+    display: flex;
+    align-items: center;
+}
+
+
+.allMuscleButtons{
+    display: flex;
+    width: 900px;
+    justify-content: space-between;
+    margin-bottom: 30px;
 }
