@@ -1,4 +1,3 @@
-const e = require("express");
 const express = require("express");
 const router = express.Router();
 
@@ -67,10 +66,9 @@ router.delete("/:bodyId",(req,res)=>{
 });
 
 
-
-
 //This is the route to see the body part zoomed in
 router.get("/:bodyId/:bodyPart",(req, res)=>{
+
     db.Body.findById(req.params.bodyId, (err, foundBody)=>{
         const muscles = foundBody.allMuscles;
         const remainingMuscles = [];
@@ -82,14 +80,17 @@ router.get("/:bodyId/:bodyPart",(req, res)=>{
                 else displayedMuscles.push(muscles[i].name);
             }
         };
+
         console.log(remainingMuscles);
 
-        res.render("bodies/zoomed",{
-            body: foundBody,
-            bodyPart: req.params.bodyPart,
-            muscles: remainingMuscles,
-            displayedMuscles: displayedMuscles,
-            empty: (displayedMuscles.length == 0),
+        db.Note.find({bodyPart:req.params.bodyPart, user: foundBody._id},(err,allNotesFound)=>{
+                res.render("bodies/zoomed",{
+                    body: foundBody,
+                    bodyPart: req.params.bodyPart,
+                    muscles: remainingMuscles,
+                    displayedMuscles: displayedMuscles,
+                    notes: allNotesFound,
+                });
         });
     });
 });
@@ -116,7 +117,22 @@ router.put("/:bodyId/:bodyPart",(req, res)=>{
 router.post("/:bodyId/:bodyPart",(req, res)=>{
     db.Note.create(req.body,(err,newNote)=>{
         if(err) return console.log(err);
-        res.redirect(`/bodies/${req.params.bodyId}`)
+
+        db.Body.findById(req.params.bodyId,(err,foundBody)=>{
+            if(err) return console.log(err);
+
+            foundBody.notes.push(newNote._id);
+            foundBody.save((err, savedBody) => {
+                if (err) return console.log(err);
+                
+                newNote.user = savedBody._id;
+                newNote.save((err, savedNote)=>{
+                    if (err) return console.log(err);
+
+                    res.redirect(`/bodies/${req.params.bodyId}/${req.params.bodyPart}`);
+                });
+            });
+        });
     });
 });
 
