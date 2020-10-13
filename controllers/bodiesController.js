@@ -138,5 +138,8 @@ router.post("/:bodyId/:bodyPart",(req, res)=>{
 });
 
 
+router.get("/:bodyId/:bodyPart/edit",(req, res)=>{
+
+});
 
 module.exports = router;

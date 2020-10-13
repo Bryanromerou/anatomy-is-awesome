@@ -19,7 +19,7 @@
         <div>
             <ul>
             <%for (i=0 ; i<notes.length ; i++) { %>
-                <a href="/notes/<%= notes[i]._id%>" name = "note" value = "<%= notes[i]%>"><li><%= notes[i].title%></li></a>
+                <a href="/notes/<%= notes[i]._id%>/edit" name = "note" value = "<%= notes[i]%>"><li><%= notes[i].title%></li></a>
             <% } %>
             </ul>
         </div>

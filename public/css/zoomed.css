@@ -49,3 +49,7 @@ button{
     justify-content: space-between;
     margin-bottom: 30px;
 }
+
+a{
+    color: #000;
+}
