@@ -46,7 +46,7 @@ router.get("/:noteId", (req, res) => {
 
 //---------------Edit------------------//
 router.get("/:noteId/edit", (req, res) => {
-    db.Note.findById(req.params.noteId, (err, editNote) => {
+    db.Note.findById(req.params.noteId).populate("user").exec((err, editNote) => {
         if (err) return console.log(err);
         res.render("notes/edit", {
             note: editNote,
@@ -54,6 +54,7 @@ router.get("/:noteId/edit", (req, res) => {
 
     });
 });
+
 //---------------Update----------------//
 router.put("/:noteId", (req, res) => {
     db.Note.findByIdAndUpdate(req.params.noteId, {$set:
@@ -65,6 +66,7 @@ router.put("/:noteId", (req, res) => {
         res.redirect(`/notes/${newNote._id}`)
 });
 });
+
 //---------------Destroy---------------//
 router.delete("/:noteId", (req, res) => {
     db.Note.findByIdAndDelete(req.params.noteId, (err, restOfProperties) => {

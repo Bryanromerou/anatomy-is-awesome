@@ -3,20 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tiny.cloud/1/xzc8gk0ro1z3beph28zwvainplprcrf6dowpxy8lm94mnlkz/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+
     <title>Edit Notes</title>
 </head>
 <body>
     <h1>Edit notes</h1>
     <form action="/notes/<%=note._id%>?_method=PUT" method="POST">
+        <h2><%=note.user.name%>'s notes on the <%=note.muscle%></h2>
         <div>
             <label for="title">Title:</label>
             <input type="text" id="title" name="title" value= "<%=note.title%>" >
         </div>
         <div>
-            <label for="text">Text:</label>
-            <input type="text" id="text" name="text" value= "<%=note.text%>" >
+            <label for="mytextarea">Text:</label>
+            <textarea id="mytextarea" name = "text"><%=note.text%></textarea>
         </div>
         <input type="submit" value="Edit Notes">
     </form>
+
+    <script src="../../javascript/noteTaking.js"></script>
 </body>
 </html>
