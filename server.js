@@ -9,6 +9,10 @@ const PORT = process.env.PORT || 4000;
 const ctrl = require("./controllers");
 
 //-------Middleware
+// Serve Static Asssets (JS, CSS jQuery)
+app.use(express.static());
+
+// Body Parser
 app.use(bodyParser.urlencoded({ extended: false }));
 app.set("view engine", "ejs");
 app.use(methodOverride('_method'));
