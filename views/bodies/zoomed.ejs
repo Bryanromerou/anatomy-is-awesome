@@ -15,8 +15,10 @@
 
     <section class="middleSection">
         <div id = "<%= bodyPart%>"></div>
+
         <% if(notes.length != 0){%>
         <div>
+            <h3>Saved Notes</h3>
             <ul>
             <%for (i=0 ; i<notes.length ; i++) { %>
                 <a href="/notes/<%= notes[i]._id%>/edit" name = "note" value = "<%= notes[i]%>"><li><%= notes[i].title%></li></a>
