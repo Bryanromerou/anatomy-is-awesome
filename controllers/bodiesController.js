@@ -80,18 +80,17 @@ router.get("/:bodyId/:bodyPart",(req, res)=>{
                 else displayedMuscles.push(muscles[i].name);
             }
         };
-        console.log(remainingMuscles);
-        db.Note.find({bodyPart:req.params.bodyPart, user: foundBody._id},(err,allNotesFound)=>{
 
-            if(allNotesFound.length!=0)
-    
-            res.render("bodies/zoomed",{
-                body: foundBody,
-                bodyPart: req.params.bodyPart,
-                muscles: remainingMuscles,
-                displayedMuscles: displayedMuscles,
-                notes: allNotesFound,
-            });
+        console.log(remainingMuscles);
+
+        db.Note.find({bodyPart:req.params.bodyPart, user: foundBody._id},(err,allNotesFound)=>{
+                res.render("bodies/zoomed",{
+                    body: foundBody,
+                    bodyPart: req.params.bodyPart,
+                    muscles: remainingMuscles,
+                    displayedMuscles: displayedMuscles,
+                    notes: allNotesFound,
+                });
         });
     });
 });
@@ -135,11 +134,6 @@ router.post("/:bodyId/:bodyPart",(req, res)=>{
             });
         });
     });
-});
-
-
-router.get("/:bodyId/:bodyPart/edit",(req, res)=>{
-
 });
 
 module.exports = router;
