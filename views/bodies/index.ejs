@@ -16,10 +16,14 @@
     <ul class = "bodyList">
         <% for(let i = 0 ; i < bodies.length; i++){ %> 
         <li class = "bodyListElement">
-            <a href="/bodies/<%= bodies[i]._id %>">
-            <div class = "bodyPreview">
-                <div id="fullSkeleton"></div>
-                <p class="bodyName"><%= bodies[i].name %></p>
+            <div class="insideDiv">
+                <a href="/bodies/<%= bodies[i]._id %>">
+
+                <div class = "bodyPreview">
+                    <div id="fullSkeleton"></div>
+                    <h4 class="bodyName"><%= bodies[i].name %></h4>
+                </div>
+
                 </a>
             </div>
         </li>
