@@ -10,7 +10,14 @@
 </head>
 
 <body>
-    <h2><%= body.name %>'s <%= bodyPart%></h2>
+    <nav>
+        <h2><%= body.name %>'s <%= bodyPart%></h2>
+        <div class = "navButtons">
+            <a href="/bodies/new"><p id="addUser">Add New User</p></a>
+            <a href="/"><p id="home">Home</p></a>
+        </div>
+    </nav>
+    
 
     <section class="middleSection">
         <div id = "<%= bodyPart%>"></div>
@@ -31,7 +38,7 @@
                 <form action ="/bodies/<%= body._id%>/<%= bodyPart%>" method="POST">
 
                     <label for="title">Title:</label>
-                    <input type="text" id = "title" name = "title" value= "Note #1" >
+                    <input type="text" id = "title" name = "title" value= "Title" >
                     
                     <select class="custom-select" name="muscle">
                         <% displayedMuscles.forEach((muscle) => { %>
@@ -51,7 +58,7 @@
     </section>
 
     <% for(let i = 0 ; i< displayedMuscles.length; i++){ %> 
-        <p>The <%= displayedMuscles[i]%> is now on the body</p>
+        <p class = "displayMuscle">The <%= displayedMuscles[i]%> is now on the body</p>
     <% } %> 
 
     <!-- if not empty then create a note -->

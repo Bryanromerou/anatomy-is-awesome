@@ -7,12 +7,13 @@
     <title>Body Index</title>
 </head>
 <body>
-    <header>
+    <nav>
         <h1>Body Index</h1>
-        <nav>
-            <a href="/bodies/new"><p id="addUser">Add User</p></a>
-        </nav>
-    </header>
+        <div class = "navButtons">
+            <a href="/bodies/new"><p id="addUser">Add New User</p></a>
+            <a href="/"><p id="home">Home</p></a>
+        </div>
+    </nav>
     <ul class = "bodyList">
         <% for(let i = 0 ; i < bodies.length; i++){ %> 
         <li class = "bodyListElement">
@@ -20,7 +21,7 @@
                 <a href="/bodies/<%= bodies[i]._id %>">
 
                 <div class = "bodyPreview">
-                    <div id="fullSkeleton"></div>
+                    <div id="fullSkeletonIndex"></div>
                     <h4 class="bodyName"><%= bodies[i].name %></h4>
                 </div>
 
