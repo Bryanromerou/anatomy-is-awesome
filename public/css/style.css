@@ -7,23 +7,28 @@ a{
     text-decoration: none;
 }
 body{
-    background-color: #e4e4e4;
+    background-color: #D3DCE2;
 }
-header{
-    background-color: red;
+nav{
+    background-color: #6185B7;
     display: flex;
-    align-items: baseline;
+    align-items: center;
     justify-content: space-between;
     padding: 20px 150px 20px 80px;
+    height: 100px;
+    width: 100%;
 }
-nav #addUser{
-    color: white;
+p{
+    color: black;
+    font-size: x-large;
+    margin: 20px;
 }
 
 
 .bodyList{
     flex-wrap: wrap;
     display: flex;
+    margin: 20px;
 }
 .bodyPreview{
     display: flex;
@@ -35,28 +40,77 @@ nav #addUser{
 .bodyListElement{
     list-style-type:none;
     display: flex;
-    background-color: springgreen;
-    border-style: solid;
+    background-color: #071222;
     width: 300px;
     height: 300px;
     align-items: center;
     justify-content: center;
+    margin: 8px;
+    
 }
 
 .bodyAddressIndex{
     padding: 0 14px;
 }
-#fullSkeleton{
-    content:url("../images/fullBody.png");
+#fullSkeletonIndex{
+    content:url("../images/fullBody2.png");
     width: auto;
-    height: 200px;
+    height: 240px;
 }
 
 .insideDiv{
-    background-color: rgb(139, 139, 139);
+    background-image:linear-gradient( #5f6e80,#091A31) ;
     display: flex;
-    width: 80%;
-    height: 80%;
+    width: 98%;
+    height: 98%;
     align-items: center;
     justify-content: center;
+}
+
+h4{
+    padding-top: 10px;
+    color: white;
+}
+
+.navButtons{
+    display: flex;
+}
+
+
+#fullSkeleton{
+    content:url("../images/fullBody.png");
+    width: auto;
+    height: 600px;
+    margin-bottom: 20px;
+}
+
+#allButtons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+}
+
+#editDelete{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5px;
+}
+
+#bodyParts{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin: 20px;
+}
+
+.show{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2{
+    margin-top: 30px;
 }

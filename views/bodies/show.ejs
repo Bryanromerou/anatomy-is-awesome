@@ -4,16 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-<link rel="stylesheet" href="../../css/bodyShow.css">
+<link rel="stylesheet" href="../../css/style.css">
 <title><%= body.name %></title>
 </head>
-<body>
-    <header>
+<body class = "show">
+    <nav>
         <h1>Skeleton</h1>
-        <nav>
-            <a href="/bodies"><p id="addUser">Select User</p></a>
-        </nav>
-    </header>
+        <div class = "navButtons">
+            <a href="/"><p id="home">Home</p></a>
+            <a href="/bodies/new"><p id="addUser">Add New User</p></a>
+            <a href="/bodies"><p id="allBodies">All Users</p></a>
+        </div>
+    </nav>
 
     <h2><%= body.name %></h2>
 
@@ -40,7 +42,7 @@
             </form>
 
             <form action="/bodies/<%=body._id%>?_method=DELETE" method="POST">
-                <button type="submit" value="Delete user" class="btn btn-light">Delete User</button>
+                <button type="submit" value="Delete user" class="btn btn-danger">Delete User</button>
             </form>           
         </div>
     </div>
