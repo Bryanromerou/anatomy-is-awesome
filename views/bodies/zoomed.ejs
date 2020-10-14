@@ -7,7 +7,7 @@
     
     <script src="https://cdn.tiny.cloud/1/xzc8gk0ro1z3beph28zwvainplprcrf6dowpxy8lm94mnlkz/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     <link rel="stylesheet" href="../../css/zoomed.css">
-    <title>Zoomed</title>
+    <title>Head Body Part</title>
 </head>
 
 <body>
@@ -34,7 +34,7 @@
                     <label for="title">Title:</label>
                     <input type="text" id = "title" name = "title" value= "Note #1" >
                     
-                    <select name="muscle">
+                    <select class="custom-select" name="muscle">
                         <% displayedMuscles.forEach((muscle) => { %>
                           <option value="<%= muscle %>"><%= muscle %></option>
                         <% }) %>
@@ -44,7 +44,7 @@
                     <input type="hidden" name = "bodyId" value ="<%= body._id%>">
 
                     <textarea id="mytextarea" name = "text">This is your note taking area</textarea>
-                    <button type="submit">Save</button>
+                    <button class="btn btn-primary" type="submit">Save</button>
                 </form>
             <%}%>
         </div>
