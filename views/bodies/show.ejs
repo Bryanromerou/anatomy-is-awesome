@@ -21,27 +21,27 @@
     <div id="allButtons">
         <div id="bodyParts">
             <form action="/bodies/<%= body._id%>/head" method="GET">
-                <input type="submit" value="Head">
+                <button type="submit" value="Head" class="btn btn-primary">Head</button>
             </form>
             <form action="/bodies/<%= body._id%>/arms" method="GET">
-                <input type="submit" value="Arms">
+                <button type="submit" value="Arms" class="btn btn-primary">Arms</button>
             </form>
             <form action="/bodies/<%= body._id%>/legs" method="GET">
-                <input type="submit" value="Legs">
+                <button type="submit" value="Legs" class="btn btn-primary">Legs</button>
             </form>
             <form action="/bodies/<%= body._id%>/torso" method="GET">
-                <input type="submit" value="Torso">
+                <button type="submit" value="Torso" class="btn btn-primary">Torso</button>
             </form>
         </div>
 
         <div id="editDelete">
-            <form action="/bodies/<%=body._id%>?_method=DELETE" method="POST">
-                <button type="submit" value="Delete user" class="btn btn-light">Delete User</button>
-            </form>
-            
             <form action="/bodies/<%= body._id%>/edit" method="GET">
                 <button type="submit" value="Edit User" class="btn btn-dark">Edit User</button>
             </form>
+
+            <form action="/bodies/<%=body._id%>?_method=DELETE" method="POST">
+                <button type="submit" value="Delete user" class="btn btn-light">Delete User</button>
+            </form>           
         </div>
     </div>
 
