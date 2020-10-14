@@ -6,22 +6,22 @@ body{
 }
 
 #head{
-    content: url("../images/head.png");
+    content: url("../images/head edit.png");
     height: 600px;
     width: auto;
 }
 #arms{
-    content: url("../images/arms.png");
+    content: url("../images/arm edit.png");
     height: 300px;
     width: auto;
 }
 #legs{
-    content: url("../images/legs.png");
+    content: url("../images/leg edit.png");
     height: 300px;
     width: auto;
 }
 #torso{
-    content: url("../images/torso.png");
+    content: url("../images/edit torso.png");
     height: 300px;
     width: auto;
 }
