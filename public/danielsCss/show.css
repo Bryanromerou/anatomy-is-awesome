@@ -1,3 +1,18 @@
-body{
-    background-color: green;
-}
+body
+
+    {
+        min-height: 100vh;
+        min-width: 100vw;
+        background-image: url("../images/human head wallpaper Practice 1.jpg.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+    }
+
+    #button-show {
+        margin: 5px;
+        padding: 5px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
