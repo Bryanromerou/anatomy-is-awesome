@@ -87,6 +87,8 @@ p{
 .muscle{
 }
 
+
+/* ARMS */
 #Bicep{
     position: absolute;
     background-color: transparent;
@@ -115,6 +117,8 @@ p{
     height: 300px;
     opacity: 1;
 }
+
+/* HEAD */
 #Frontalis{
     position: absolute;
     background-color: transparent;
@@ -122,8 +126,139 @@ p{
     height: 300px;
     opacity: 1;
 }
-.imageSection{
-    
+#Masseter{
+    position: absolute;
+    background-color: transparent;
+    content:url("../images/bodyParts/head/Masseter.png");
+    height: 300px;
+    opacity: 1;
+}
+#Orbicularis{
+    position: absolute;
+    background-color: transparent;
+    content:url("../images/bodyParts/head/Orbicularis Oris.png");
+    height: 300px;
+    opacity: 1;
+}
+#Sternocleidomastoid{
+    position: absolute;
+    background-color: transparent;
+    content:url("../images/bodyParts/head/Sternocleidomastoid.png");
+    height: 300px;
+    opacity: 1;
+}
+#Temporalis{
+    position: absolute;
+    background-color: transparent;
+    content:url("../images/bodyParts/head/Temporalis.png");
+    height: 300px;
+    opacity: 1;
+}
+
+/* LEGS */
+#Lateralis{
+    position: absolute;
+    background-color: transparent;
+    content:url("../images/bodyParts/legs/Vastus Lateralis.png");
+    height: 300px;
+    opacity: 1;
+}
+
+#Femoris{
+    position: absolute;
+    background-color: transparent;
+    content:url("../images/bodyParts/legs/Rectus Femoris.png");
+    height: 300px;
+    opacity: 1;
+}
+
+#Adductors{
+    position: absolute;
+    background-color: transparent;
+    content:url("../images/bodyParts/legs/Adductors.png");
+    height: 300px;
+    opacity: 1;
+}
+
+#Medialis{
+    position: absolute;
+    background-color: transparent;
+    content:url("../images/bodyParts/legs/Vastus Medialis.png");
+    height: 300px;
+    opacity: 1;
+}
+
+#Sartorius{
+    position: absolute;
+    background-color: transparent;
+    content:url("../images/bodyParts/legs/Sartorius.png");
+    height: 300px;
+    opacity: 1;
+}
+
+/* Torso */
+#Trapezius{
+    position: absolute;
+    background-color: transparent;
+    content:url("../images/bodyParts/torso/Trapezius.png");
+    height: 300px;
+    opacity: 1;
+}
+#Pectorial{
+    position: absolute;
+    background-color: transparent;
+    content:url("../images/bodyParts/torso/Pectorial.png");
+    height: 300px;
+    opacity: 1;
+}
+#Obliques{
+    position: absolute;
+    background-color: transparent;
+    content:url("../images/bodyParts/torso/Obliques.png");
+    height: 300px;
+    opacity: 1;
+}
+#Abdominis{
+    position: absolute;
+    background-color: transparent;
+    content:url("../images/bodyParts/torso/Rectus Abdominis.png");
+    height: 300px;
+    opacity: 1;
+}
+#Abdominis{
+    position: absolute;
+    background-color: transparent;
+    content:url("../images/bodyParts/torso/Rectus Abdominis.png");
+    height: 300px;
+    opacity: 1;
+}
+#head1{
+    position: absolute;
+    background-color: transparent;
+    content:url("../images/bodyParts/head/head1.png");
+    height: 300px;
+    opacity: .3;
+}
+#torso1{
+    position: absolute;
+    background-color: transparent;
+    content:url("../images/bodyParts/torso/torso1.png");
+    height: 300px;
+    opacity: .15;
+}
+#legs1{
+    position: absolute;
+    background-color: transparent;
+    content:url("../images/bodyParts/legs/legs1.png");
+    height: 300px;
+    opacity: .2;
+}
+#arms1{
+    position: absolute;
+    background-color: transparent;
+    content:url("../images/bodyParts/arms/arms1.png");
+    height: 300px;
+    opacity: .2;
 }
 
 img{
