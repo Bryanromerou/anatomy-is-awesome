@@ -23,8 +23,24 @@
     <div class = "imageSection">
 
         <% for(let i = 0 ; i< displayedMuscles.length; i++){ %> 
+            <% if(displayedMuscles[i] == "Vastus Lateralis") {%> 
+                <div class = "muscle" id = "Lateralis" ></div>
+            <% } %> 
+            <% if(displayedMuscles[i] == "Rectus Femoris") {%> 
+                <div class = "muscle" id = "Femoris" ></div>
+            <% } %> 
+            <% if(displayedMuscles[i] == "Vastus Medialis") {%> 
+                <div class = "muscle" id = "Medialis" ></div>
+            <% } %> 
+            <% if(displayedMuscles[i] == "Orbicularis Oris") {%> 
+                <div class = "muscle" id = "Orbicularis" ></div>
+            <% } %> 
+            <% if(displayedMuscles[i] == "Rectus Abdominis") {%> 
+                <div class = "muscle" id = "Abdominis" ></div>
+            <% } %> 
             <div class = "muscle" id = "<%= displayedMuscles[i]%>" ></div>
-        <% } %> 
+            <% } %>
+        <div class = "muscle" id = "<%= bodyPart%>1" ></div>
         <img src="../../images/bodyParts/<%= bodyPart%>/<%= bodyPart%>.png" alt="">
     </div>
     
