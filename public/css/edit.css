@@ -6,12 +6,10 @@ body{
     justify-content: center;
 }
 form{
-    height: 100vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
 h1{
-    position: absolute;
     top: 10px;
 }
