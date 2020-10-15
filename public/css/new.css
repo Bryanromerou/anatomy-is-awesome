@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-body {
-    min-height: 100vh;
+body { 
+min-height: 100vh;
         min-width: 100vw;
         background-image: url("../images/Skull anatomy.png");
         background-size: cover;
         background-repeat: no-repeat;
-=======
-body{
-    background-color: #D3DCE2;
->>>>>>> submaster
 }
