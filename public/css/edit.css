@@ -1,16 +1,18 @@
 body{
+<<<<<<< HEAD
+=======
+    background-color: #BBC6D2;
+>>>>>>> submaster
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 form{
-    height: 100vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
 h1{
-    position: absolute;
     top: 10px;
 }
