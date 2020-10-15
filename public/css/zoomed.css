@@ -6,12 +6,12 @@ body{
 }
 
 #head{
-    content: url("../images/head edit.png");
+    content: url("../images/bodyParts/head/head.png");
     height: 600px;
     width: auto;
 }
 #arms{
-    content: url("../images/arm edit.png");
+    content: url("../images/bodyParts/arms/arm.png");
     height: 300px;
     width: auto;
 }
@@ -82,4 +82,50 @@ p{
 }
 .displayMuscle{
     margin: 0px;
+}
+
+.muscle{
+}
+
+#Bicep{
+    position: absolute;
+    background-color: transparent;
+    content:url("../images/bodyParts/arms/Bicep.png");
+    height: 300px;
+    opacity: 1;
+}
+#Deltoid{
+    position: absolute;
+    background-color: transparent;
+    content:url("../images/bodyParts/arms/Deltoid.png");
+    height: 300px;
+    opacity: 1;
+}
+#Flexers{
+    position: absolute;
+    background-color: transparent;
+    content:url("../images/bodyParts/arms/Flexers.png");
+    height: 300px;
+    opacity: 1;
+}
+#Extenders{
+    position: absolute;
+    background-color: transparent;
+    content:url("../images/bodyParts/arms/Extenders.png");
+    height: 300px;
+    opacity: 1;
+}
+#Frontalis{
+    position: absolute;
+    background-color: transparent;
+    content:url("../images/bodyParts/head/Frontalis.png");
+    height: 300px;
+    opacity: 1;
+}
+.imageSection{
+    
+}
+
+img{
+    height: 300px;
 }
