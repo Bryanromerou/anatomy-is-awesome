@@ -20,8 +20,15 @@
     </nav>
     
 
+    <div class = "imageSection">
+
+        <% for(let i = 0 ; i< displayedMuscles.length; i++){ %> 
+            <div class = "muscle" id = "<%= displayedMuscles[i]%>" ></div>
+        <% } %> 
+        <img src="../../images/bodyParts/<%= bodyPart%>/<%= bodyPart%>.png" alt="">
+    </div>
+    
     <section class="middleSection">
-        <div id = "<%= bodyPart%>"></div>
 
         <% if(notes.length != 0){%>
         <div>
@@ -58,9 +65,7 @@
 
     </section>
 
-    <% for(let i = 0 ; i< displayedMuscles.length; i++){ %> 
-        <p class = "displayMuscle">The <%= displayedMuscles[i]%> is now on the body</p>
-    <% } %> 
+    
 
     <!-- if not empty then create a note -->
     <section class="allMuscleButtons">
