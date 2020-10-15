@@ -1,0 +1,131 @@
+body{
+    background-color: #D3DCE2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#head{
+    content: url("../images/bodyParts/head/head.png");
+    height: 600px;
+    width: auto;
+}
+#arms{
+    content: url("../images/bodyParts/arms/arm.png");
+    height: 300px;
+    width: auto;
+}
+#legs{
+    content: url("../images/leg edit.png");
+    height: 300px;
+    width: auto;
+}
+#torso{
+    content: url("../images/edit torso.png");
+    height: 300px;
+    width: auto;
+}
+
+h2{
+    margin-top:30px;
+    margin-bottom: 20px;
+}
+
+button{
+    width: 190px;
+    height: 50px;
+    font-size: larger;
+}
+
+.middleSection{
+    display: flex;
+    align-items: center;
+}
+
+
+.allMuscleButtons{
+    display: flex;
+    width: 900px;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+a{
+    color: #000;
+}
+
+li{
+    list-style-type:none;
+    margin-top: 10px;
+}
+ul{
+    width: 300px;
+    padding-left: 0;
+}
+
+nav{
+    background-color: #6185B7;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 150px 20px 80px;
+    height: 100px;
+    width: 100%;
+}
+.navButtons{
+    display: flex;
+}
+p{
+    color: black;
+    font-size: x-large;
+    margin: 20px;
+}
+.displayMuscle{
+    margin: 0px;
+}
+
+.muscle{
+}
+
+#Bicep{
+    position: absolute;
+    background-color: transparent;
+    content:url("../images/bodyParts/arms/Bicep.png");
+    height: 300px;
+    opacity: 1;
+}
+#Deltoid{
+    position: absolute;
+    background-color: transparent;
+    content:url("../images/bodyParts/arms/Deltoid.png");
+    height: 300px;
+    opacity: 1;
+}
+#Flexers{
+    position: absolute;
+    background-color: transparent;
+    content:url("../images/bodyParts/arms/Flexers.png");
+    height: 300px;
+    opacity: 1;
+}
+#Extenders{
+    position: absolute;
+    background-color: transparent;
+    content:url("../images/bodyParts/arms/Extenders.png");
+    height: 300px;
+    opacity: 1;
+}
+#Frontalis{
+    position: absolute;
+    background-color: transparent;
+    content:url("../images/bodyParts/head/Frontalis.png");
+    height: 300px;
+    opacity: 1;
+}
+.imageSection{
+    
+}
+
+img{
+    height: 300px;
+}

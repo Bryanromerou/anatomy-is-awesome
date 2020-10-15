@@ -3,24 +3,50 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<link rel="stylesheet" href="../../css/style.css">
 <title><%= body.name %></title>
 </head>
-<body>
-    <h1>New User</h1>
-    <h2>Name: <%= body.name %></h2>
-    <h3>Date of Birth: <%= body.dob %></h3>
-    <h4>Gender: <%= body.gender %></h4>
+<body class = "show">
+    <nav>
+        <h1>Skeleton</h1>
+        <div class = "navButtons">
+            <a href="/"><p id="home">Home</p></a>
+            <a href="/bodies/new"><p id="addUser">Add New User</p></a>
+            <a href="/bodies"><p id="allBodies">All Users</p></a>
+        </div>
+    </nav>
 
-    <form action="/bodies/<%=body._id%>?_method=DELETE" method="POST">
-        <input type="submit" value="Delete user">
-    </form>
+    <h2><%= body.name %></h2>
 
-    <form action="/bodies/<%= body._id%>/edit" method="GET">
-        <input type="submit" value="Edit User">
-    </form>
+    <div id="fullSkeleton"></div>
+    <div id="allButtons">
+        <div id="bodyParts">
+            <form action="/bodies/<%= body._id%>/head" method="GET">
+                <button type="submit" value="Head" class="btn btn-primary">Head</button>
+            </form>
+            <form action="/bodies/<%= body._id%>/arms" method="GET">
+                <button type="submit" value="Arms" class="btn btn-primary">Arms</button>
+            </form>
+            <form action="/bodies/<%= body._id%>/legs" method="GET">
+                <button type="submit" value="Legs" class="btn btn-primary">Legs</button>
+            </form>
+            <form action="/bodies/<%= body._id%>/torso" method="GET">
+                <button type="submit" value="Torso" class="btn btn-primary">Torso</button>
+            </form>
+        </div>
 
-    <form action="/bodies" method="GET">
-        <input type="submit" value="All User">
-    </form>
+        <div id="editDelete">
+            <form action="/bodies/<%= body._id%>/edit" method="GET">
+                <button type="submit" value="Edit User" class="btn btn-dark">Edit User</button>
+            </form>
+
+            <form action="/bodies/<%=body._id%>?_method=DELETE" method="POST">
+                <button type="submit" value="Delete user" class="btn btn-danger">Delete User</button>
+            </form>           
+        </div>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </body>
 </html>

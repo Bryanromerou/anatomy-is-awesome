@@ -1,0 +1,17 @@
+*{
+    background-color: #D3DCE2;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section{
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

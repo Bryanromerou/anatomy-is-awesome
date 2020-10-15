@@ -3,25 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/properties/edit.css">
+    <link rel="stylesheet" href="../../css/edit.css">
     <title>Edit User</title>
 </head>
 <body>
+
+    <h1>Edit User</h1>
     <form action="/bodies/<%=body._id%>?_method=PUT" method="POST">
+
         <div>
             <label for="name">Name:</label>
             <input type="text" id = "name" name  = "name"value="<%= body.name%>" >
         </div>
-        <div>
-            <label for="dob">Date of Birth:</label>
-            <input type="date" id = "dob" name  = "dob"value="<%= body.dob%>" >
-        </div>
-        <div>
-            <label for="gender">gender:</label>
-            <input type="text" id = "gender" name  = "gender"value="<%= body.gender%>" >
-        </div>
-        
+
         <input type="submit" value="Edit User">
+
     </form>
+
 </body>
 </html>

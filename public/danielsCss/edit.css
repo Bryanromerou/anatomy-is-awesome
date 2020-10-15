@@ -1,0 +1,24 @@
+body
+
+    {
+        min-height: 100vh;
+        min-width: 100vw;
+        background-image: url("../images/Anat-WP-background-color2.jpg.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+    }
+    
+    
+    
+    h1 {
+        background-color: steelblue;
+        
+    }
+
+    #button-edit {
+        display: flex;
+        flex-direction: row;
+        flex-grow: 8;
+        align-self: flex-start
+    }
