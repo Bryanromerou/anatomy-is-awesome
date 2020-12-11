@@ -1,4 +1,5 @@
 const express =require("express");
+require("dotenv").config();
 const app = express();
 const methodOverride = require("method-override");
 const bodyParser = require("body-parser");
@@ -6,7 +7,6 @@ const morgan = require('morgan');
 //const layouts = require('express-ejs-layouts');
 
 // ------ DOTENV
-require("dotenv").config();
 const PORT = process.env.PORT || 4000;
 const ctrl = require("./controllers");
 

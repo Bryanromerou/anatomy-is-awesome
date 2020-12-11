@@ -1,7 +1,24 @@
-body { 
-min-height: 100vh;
+body{
+        overflow: hidden;
+}
+
+.background-image {
+        opacity: 60%;
+        z-index: -2;
+        position: absolute;
+        min-height: 100vh;
         min-width: 100vw;
         background-image: url("../images/Skull anatomy.png");
         background-size: cover;
         background-repeat: no-repeat;
+}
+
+.create-user{
+        height: 90vh;
+        z-index:999;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1000px;
 }

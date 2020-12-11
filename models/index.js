@@ -1,19 +1,20 @@
 const mongoose = require("mongoose");
 
-mongoose.connect(process.env.MONGODB_URI,{
+const connectionString =
+    process.env.MONGODB_URI ;
+
+const configOptions = {
     useNewUrlParser: true,
-    useFindAndModify: false,
     useCreateIndex: true,
     useUnifiedTopology: true,
-});
+    useFindAndModify: false,
+};
 
-mongoose.connection.on("connected",()=>{
-    console.log("Successfully connected to mongodb!");
-});
+mongoose
+    .connect(connectionString, configOptions)
+    .then(() => console.log("MongoDB successfully connected..."))
+    .catch((err) => console.log(`MongoDB connection error: ${err}`));
 
-mongoose.connection.on("error",(err)=>{
-    console.log(`Oh no there has been an error: ${err}`);
-});
 
 module.exports = {
     Body: require("./Body"),
