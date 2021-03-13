@@ -1,4 +1,4 @@
-# anatomy-is-awesome--Project-1
+# Anatomy-is-Awesome
 
 
 ## User Story

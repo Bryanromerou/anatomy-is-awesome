@@ -1,26 +1,31 @@
-const express =require("express");
 require("dotenv").config();
+const express =require("express");
 const app = express();
+
+//-------Middleware
 const methodOverride = require("method-override");
-const bodyParser = require("body-parser");
+// const bodyParser = require("body-parser");
 const morgan = require('morgan');
-//const layouts = require('express-ejs-layouts');
+const ejslayouts = require('express-ejs-layouts');
+app.use(ejslayouts);
 
 // ------ DOTENV
 const PORT = process.env.PORT || 4000;
 const ctrl = require("./controllers");
 
-//-------Middleware
 
 // BOOTSTRAP
 app.use(express.static(`${__dirname}/public`));
-//app.use(express.static("public"));
+
 // Body Parser
-app.use(bodyParser.urlencoded({ extended: false }));
+// app.use(bodyParser.urlencoded({ extended: false }));
+
 // EJS
 app.set("view engine", "ejs");
+
 // Method Override
 app.use(methodOverride("_method"));
+
 // Morgan
 app.use(morgan(":method :url"));
 // Express Layout
