@@ -21,6 +21,7 @@ router.get("/new",(req, res)=>{
 
 //---------------Create-----------------//
 router.post("/",(req,res)=>{
+    console.log(req.body)
     db.Body.create(req.body,(err,newBody)=>{
         if(err) return console.log(err);
         res.redirect(`/bodies/${newBody._id}`)

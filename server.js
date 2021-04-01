@@ -4,7 +4,7 @@ const app = express();
 
 //-------Middleware
 const methodOverride = require("method-override");
-// const bodyParser = require("body-parser");
+const bodyParser = require("body-parser");
 const morgan = require('morgan');
 const ejslayouts = require('express-ejs-layouts');
 app.use(ejslayouts);
@@ -18,7 +18,7 @@ const ctrl = require("./controllers");
 app.use(express.static(`${__dirname}/public`));
 
 // Body Parser
-// app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // EJS
 app.set("view engine", "ejs");
