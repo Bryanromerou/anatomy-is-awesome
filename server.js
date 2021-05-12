@@ -29,10 +29,10 @@ app.use(methodOverride("_method"));
 // Morgan
 app.use(morgan(":method :url"));
 // Express Layout
-//app.use(layouts);
+// app.use(layouts);
 
 app.get("/",(req, res)=>{
-    res.render("index");
+    res.render("index.ejs");
 });
 
 app.use("/bodies",ctrl.bodies);
